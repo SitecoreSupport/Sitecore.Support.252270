@@ -34,7 +34,9 @@
       }
       if (array.Length > 1)
       {
-        SiteInfo siteInfo = ResolveByVirtualFolder(possibleSites, requestPath);
+        #region Modified code
+        SiteInfo siteInfo = ResolveByVirtualFolder(array, requestPath);
+        #endregion
         if (siteInfo != null)
         {
           return siteInfo;
